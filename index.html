@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Laasya Café</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body data-theme="light">
+
+<header class="nav" role="banner">
+  <a href="#" class="brand" aria-label="Café Name Home">
+    <div class="logo">LC</div>
+    <div>
+      <div class="brand-name">Laasya Café</div>
+      <div class="brand-tagline">Mysore • Fresh & Cozy</div>
+    </div>
+  </a>
+
+  <nav class="links" role="navigation" aria-label="Main">
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#order">Order</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="controls" aria-hidden="false">
+    <button id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+  </div>
+</header>
+
+<section class="hero" id="home" aria-label="Welcome to Café Name">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <h1 class="name">Café <span class="accent">Name</span></h1>
+      <p class="tagline">Local roasts — cozy vibes — <span class="slider" aria-live="polite"></span></p>
+
+      <div class="hero-ctas">
+        <a class="btn" href="#order">Order Online</a>
+        <a class="btn ghost" href="#menu">See Menu</a>
+      </div>
+    </div>
+
+    <div class="offer-card-wrap">
+      <div class="card" aria-hidden="true">
+        <strong>Opening Offer</strong>
+        <p class="small">Free cookie with every large coffee — first week only.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main>
+    <section id="about">
+    <h2>About</h2>
+    <p class="lead">A warm, neighborhood Laasya café in Mysore serving single-origin coffee, house-baked treats and wholesome snacks. Built for meetings, work, and slow Saturdays.</p>
+  </section>
+
+    <section id="menu">
+    <h2>Menu</h2>
+    <div class="menu-list card" aria-label="Café Menu">
+            <div class="menu-row" data-id="espresso" data-price="80">
+        <div class="menu-item-name">Espresso</div><div class="menu-price">₹80 <button class="add-btn" data-add>+ Add</button></div>
+      </div>
+      <div class="menu-row" data-id="cappuccino" data-price="120">
+        <div class="menu-item-name">Cappuccino</div><div class="menu-price">₹120 <button class="add-btn" data-add>+ Add</button></div>
+      </div>
+      <div class="menu-row" data-id="cold-coffee" data-price="150">
+        <div class="menu-item-name">Cold Coffee</div><div class="menu-price">₹150 <button class="add-btn" data-add>+ Add</button></div>
+      </div>
+      <div class="menu-row" data-id="veg-sandwich" data-price="90">
+        <div class="menu-item-name">Veg Sandwich</div><div class="menu-price">₹90 <button class="add-btn" data-add>+ Add</button></div>
+      </div>
+      <div class="menu-row" data-id="cake" data-price="100">
+        <div class="menu-item-name">Chocolate Cake Slice</div><div class="menu-price">₹100 <button class="add-btn" data-add>+ Add</button></div>
+      </div>
+    </div>
+  </section>
+
+    <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="image/coffee1.jpg" alt="A freshly made latte with coffee art">
+      <img src="image/coffee2.jpg" alt="The cozy and modern interior of the cafe">
+      <img src="image/Chocolate Cake1.jpg" alt="A slice of rich chocolate cake">
+      <img src="image/coffee3.jpg" alt="A barista preparing coffee behind the counter">
+    </div>
+  </section>
+
+    <section id="order">
+    <h2>Order Online (WhatsApp)</h2>
+    <p class="lead">Select items below and send your order via WhatsApp. We'll confirm and arrange pickup/delivery.</p>
+
+    <div class="order-wrap">
+      <div class="order-panel">
+        <div class="card">
+          <strong>Quick Add Menu</strong>
+          <p class="small">Tap "Add" on any item to add to your cart instantly.</p>
+          <div class="quick-add-btns">
+            <button class="btn" data-add-short data-id="espresso" data-name="Espresso" data-price="80">Espresso</button>
+            <button class="btn" data-add-short data-id="cappuccino" data-name="Cappuccino" data-price="120">Cappuccino</button>
+            <button class="btn" data-add-short data-id="cold-coffee" data-name="Cold Coffee" data-price="150">Cold Coffee</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <strong>Order Notes</strong>
+          <textarea id="orderNotes" placeholder="Any special requests (e.g., less sugar, no onion)..." aria-label="Special requests for your order"></textarea>
+        </div>
+      </div>
+
+      <aside class="cart" aria-label="Cart summary">
+        <h3>Your Cart</h3>
+        <div class="cart-items" id="cartItems">
+          <p class="small">Cart is empty — add items from the menu.</p>
+        </div>
+
+        <div class="cart-total-row">
+          <p class="small">Total:</p>
+          <p class="total-price" id="cartTotal">₹0</p>
+        </div>
+
+        <div class="cart-actions">
+          <button id="whatsappOrder" class="btn">Order via WhatsApp</button>
+          <button id="clearCart" class="btn clear-btn">Clear</button>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+    <section id="contact">
+    <h2>Contact & Location</h2>
+    <p class="lead">Phone: <strong>+91 888XXXXXXX </strong> • Email: XXXXXXXXXXX@gmail.com</p>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps?q=Mysore,+Karnataka&output=embed" aria-label="Map to our cafe location" loading="lazy"></iframe>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2025 Laasya Café — Mysore • Made with ☕
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
